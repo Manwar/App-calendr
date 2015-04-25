@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION = '0.01';
+$App::calendr::VERSION = '0.02';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -49,7 +49,7 @@ You can list all command line options by giving --help flag.
 
 
         --name: String
-            Calendar type e.g. Bahai,Hijri,Persian,Saka
+            Calendar name e.g. Bahai,Hijri,Persian,Saka
 
 
         --year: Int
@@ -69,10 +69,7 @@ You can list all command line options by giving --help flag.
 
 =head1 SUPPORTED CALENDARS
 
-The following  supported  calendars can be installed individually or they all can
-be installed in one go using L<Task::Calendar>.
-
-    $ cpanm Task::Calendar
+The following supported calendars can be installed individually.
 
 =over 4
 
@@ -85,6 +82,10 @@ be installed in one go using L<Task::Calendar>.
 =item * L<Calendar::Saka>
 
 =back
+
+Or they all can be installed in one go using L<Task::Calendar> package.
+
+    $ cpanm Task::Calendar
 
 =cut
 
