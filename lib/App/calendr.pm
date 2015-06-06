@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION = '0.02';
+$App::calendr::VERSION = '0.03';
 
 =head1 NAME
 
@@ -8,12 +8,13 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
 use 5.006;
 use Data::Dumper;
+use App::calendr::Option;
 use Module::Pluggable
     search_path => [ 'Calendar' ],
     require     => 1,
@@ -25,11 +26,7 @@ use namespace::clean;
 
 use Types::Standard -all;
 use MooX::Options;
-
-has calendars => (is => 'rw');
-option month  => (is => 'ro', isa => Int, format => 'i', doc => 'Month number e.g. 1,2,3' );
-option year   => (is => 'ro', isa => Int, format => 'i', doc => 'Year number (3/4 digits)'  );
-option name   => (is => 'ro', isa => Str, format => 's', required => 1, doc => 'Calendar name e.g. Bahai,Hijri,Persian,Saka'  );
+with 'App::calendr::Option';
 
 =head1 DESCRIPTION
 
@@ -128,9 +125,23 @@ sub run {
 
     my $calendar = $self->get_calendar($name);
     if (defined $calendar) {
-        if (defined $month && defined $year) {
-            $calendar->month($month);
-            $calendar->year($year);
+        if (defined $month || defined $year) {
+            if (defined $month) {
+                die "ERROR: Missing year.\n" unless defined $year;
+            }
+            else {
+                die "ERROR: Missing month.\n" if defined $year;
+            }
+
+            if (defined $month) {
+                $calendar->date->validate_month($month);
+                $calendar->month($month);
+            }
+
+            if (defined $year) {
+                $calendar->date->validate_year($year);
+                $calendar->year($year);
+            }
         }
         print $calendar, "\n";
     }

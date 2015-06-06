@@ -1,5 +1,9 @@
 Revision history for App::calendr
 
+0.03  Sat Jun 06 10:20:00 2015
+      - Extracted out options and added as Moo Role (App::calendr::Option).
+      - Added unit test script t/01-app-calendr.t
+
 0.02  Sat Apr 25 09:30:00 2015
       - Updated Makefile.PL script regarding the version of pre-requisites.
       - Fixed the typo in the section "SYNOPSIS".

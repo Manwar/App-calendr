@@ -25,6 +25,7 @@ WriteMakefile(
         'MooX::Options'     => '4.018',
         'Module::Pluggable' => '5.1',
         'Moo'               => '2.000000',
+        'Moo::Role'         => '2.000000',
         'namespace::clean'  => '0.24',
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
