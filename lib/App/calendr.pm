@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION = '0.03';
+$App::calendr::VERSION = '0.04';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 

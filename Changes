@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.04  Sun Jun 07 09:15:00 2015
+      - Made the Calendar::Bahai 0.23 as pre-requisite for test 01-app-calendr.t script.
+
 0.03  Sat Jun 06 10:20:00 2015
       - Extracted out options and added as Moo Role (App::calendr::Option).
       - Added unit test script t/01-app-calendr.t
