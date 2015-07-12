@@ -34,4 +34,10 @@ like($@, qr/Invalid year/);
 eval { App::calendr->new({ name => 'bahai', month => 1, year => 0 })->run };
 like($@, qr/Invalid year/);
 
+eval { App::calendr->new({ name => 'bahai', gregorian => "1/2/3" })->run };
+like($@, qr/ERROR: Invalid gregorian date/);
+
+eval { App::calendr->new({ name => 'bahai', julian => -1 })->run };
+like($@, qr/ERROR: Invalid julian date/);
+
 done_testing();

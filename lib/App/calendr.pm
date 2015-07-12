@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION = '0.04';
+$App::calendr::VERSION = '0.05';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
@@ -35,11 +35,23 @@ distribution contains a script C<calendr>, using package L<App::calendr>.
 
 =head1 SYNOPSIS
 
-You can list all command line options by giving --help flag.
+You can list all command line options by giving C<--help> flag.The C<--name> flag
+is only  mandatory. Rest of all are  optionals. If C<--month> flag is passed then
+the C<--year> flag  becomes  mandatory and vice versa. In case neither of them is
+passed in then it would look for C<--gregorian>/C<--julian> flag  and accordingly
+act on it.In case none C<flag> passed in it would show the current calendar month.
 
     $ calendr --help
 
     USAGE: calendr [-h] [long options...]
+
+        --gregorian: String
+            Gregorian date (YYYY-MM-DD)
+
+
+        --julian: Int
+            Julian date
+
 
         --month: Int
             Month number e.g. 1,2,3
@@ -143,6 +155,22 @@ sub run {
                 $calendar->year($year);
             }
         }
+        elsif (defined $self->gregorian) {
+            my $gregorian = $self->gregorian;
+            die "ERROR: Invalid gregorian date '$gregorian'.\n"
+                unless ($gregorian =~ /^\d{4}\-\d{2}\-\d{2}$/);
+
+            my ($year, $month, $day) = split /\-/, $self->gregorian, 3;
+            print $calendar->from_gregorian($year, $month, $day) and return;
+        }
+        elsif (defined $self->julian) {
+            my $julian = $self->julian;
+            die "ERROR: Invalid julian date '$julian'.\n"
+                unless ($julian =~ /^\d+\.?\d?$/);
+
+            print $calendar->from_julian($self->julian) and return;
+        }
+
         print $calendar, "\n";
     }
     else {
