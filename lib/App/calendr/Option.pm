@@ -1,6 +1,6 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION = '0.05';
+$App::calendr::Option::VERSION = '0.06';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 

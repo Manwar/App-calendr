@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.06  Sun Nov 22 10:15:00 2015
+      - Added key 'provides' to the Makefile.PL script.
+
 0.05  Sun Jul 12 05:40:00 2015
       - Added two new command line optional flags "--gregorian" and "--julian".
       - Added unit test for the new command line flags.
