@@ -1,6 +1,7 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION = '0.06';
+$App::calendr::Option::VERSION   = '0.07';
+$App::calendr::Option::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
@@ -38,7 +39,7 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 
 =head1 REPOSITORY
 
-L<https://github.com/Manwar/App-calendr>
+L<https://github.com/manwar/App-calendr>
 
 =head1 BUGS
 

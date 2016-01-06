@@ -1,6 +1,7 @@
 package App::calendr;
 
-$App::calendr::VERSION = '0.06';
+$App::calendr::VERSION   = '0.07';
+$App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
@@ -217,7 +218,7 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 
 =head1 REPOSITORY
 
-L<https://github.com/Manwar/App-calendr>
+L<https://github.com/manwar/App-calendr>
 
 =head1 BUGS
 
