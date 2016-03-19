@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.07';
+$App::calendr::VERSION   = '0.08';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
@@ -59,7 +59,7 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
 
 
         --name: String
-            Calendar name e.g. Bahai,Hijri,Persian,Saka
+            Calendar name e.g. Bahai,Gregorian,Hijri,Persian,Saka
 
 
         --year: Int
@@ -84,6 +84,8 @@ The following supported calendars can be installed individually.
 =over 4
 
 =item * L<Calendar::Bahai>
+
+=item * L<Calendar::Gregorian>
 
 =item * L<Calendar::Hijri>
 
@@ -205,10 +207,11 @@ sub _load_calendar {
 sub _supported_calendars {
 
     return {
-        'BAHAI'   => 'Calendar::Bahai',
-        'HIJRI'   => 'Calendar::Hijri',
-        'PERSIAN' => 'Calendar::Persian',
-        'SAKA'    => 'Calendar::Saka',
+        'BAHAI'     => 'Calendar::Bahai',
+        'GREGORIAN' => 'Calendar::Gregorian',
+        'HIJRI'     => 'Calendar::Hijri',
+        'PERSIAN'   => 'Calendar::Persian',
+        'SAKA'      => 'Calendar::Saka',
     };
 }
 
@@ -257,7 +260,7 @@ L<http://search.cpan.org/dist/App-calendr/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2015 Mohammad S Anwar.
+Copyright (C) 2015 - 2016 Mohammad S Anwar.
 
 This program  is  free software; you can redistribute it and / or modify it under
 the  terms  of the the Artistic License (2.0). You may obtain  a copy of the full

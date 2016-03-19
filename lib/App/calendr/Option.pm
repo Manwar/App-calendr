@@ -1,6 +1,6 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION   = '0.07';
+$App::calendr::Option::VERSION   = '0.08';
 $App::calendr::Option::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
@@ -27,7 +27,7 @@ option month     => (is => 'ro', isa => Int, format => 'i', doc => 'Month number
 option year      => (is => 'ro', isa => Int, format => 'i', doc => 'Year number (3/4 digits)'  );
 option gregorian => (is => 'ro', isa => Str, format => 's', doc => 'Gregorian date (YYYY-MM-DD)'  );
 option julian    => (is => 'ro', isa => Str, format => 'i', doc => 'Julian date'  );
-option name      => (is => 'ro', isa => Str, format => 's', required => 1, doc => 'Calendar name e.g. Bahai,Hijri,Persian,Saka'  );
+option name      => (is => 'ro', isa => Str, format => 's', required => 1, doc => 'Calendar name e.g. Bahai,Gregorian,Hijri,Persian,Saka.'  );
 
 =head1 DESCRIPTION
 
@@ -78,7 +78,7 @@ L<http://search.cpan.org/dist/App-calendr/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2015 Mohammad S Anwar.
+Copyright (C) 2015 - 2016 Mohammad S Anwar.
 
 This program  is  free software; you can redistribute it and / or modify it under
 the  terms  of the the Artistic License (2.0). You may obtain  a copy of the full
