@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.09  Sun May 08 02:30:00 2016
+      - Added ability to generate calendar in SVG format.
+
 0.08  Sat Mar 19 06:10:00 2016
       - Added support for Gregorian Calendar.
       - Updated copyright year information in the pod document.

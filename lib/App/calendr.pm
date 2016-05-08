@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.08';
+$App::calendr::VERSION   = '0.09';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.08
+Version 0.09
 
 =cut
 
@@ -45,6 +45,10 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
     $ calendr --help
 
     USAGE: calendr [-h] [long options...]
+
+        --as_svg:
+            Generate calendar in SVG format
+
 
         --gregorian: String
             Gregorian date (YYYY-MM-DD)
@@ -174,7 +178,12 @@ sub run {
             print $calendar->from_julian($self->julian) and return;
         }
 
-        print $calendar, "\n";
+        if (defined $self->as_svg) {
+            print $calendar->as_svg, "\n";
+        }
+        else {
+            print $calendar, "\n";
+        }
     }
     else {
         die "ERROR: Calendar [$name] is not installed.\n";
