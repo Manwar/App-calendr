@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.10  Wed Jun 08 10:25:00 2016
+      - Added support for month name in addition to month number. Now --month flag can be set as month name.
+
 0.09  Sun May 08 02:30:00 2016
       - Added ability to generate calendar in SVG format.
 

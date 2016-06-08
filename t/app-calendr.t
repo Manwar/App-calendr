@@ -17,7 +17,7 @@ eval { App::calendr->new({ name => 'xxx' })->run };
 like($@, qr/Unsupported calendar/);
 
 eval { App::calendr->new({ name => 'bahai', month => 'x', year => 172 })->run };
-like($@, qr/did not pass type constraint/);
+like($@, qr/Invalid month name/);
 
 eval { App::calendr->new({ name => 'bahai', month => -1, year => 172 })->run };
 like($@, qr/Invalid month/);

@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.09';
+$App::calendr::VERSION   = '0.10';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 
@@ -154,6 +154,9 @@ sub run {
 
             if (defined $month) {
                 $calendar->date->validate_month($month);
+                if ($month =~ /^[A-Z]+$/i) {
+                    $month = $calendar->date->get_month_number($month);
+                }
                 $calendar->month($month);
             }
 

@@ -1,6 +1,6 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION   = '0.09';
+$App::calendr::Option::VERSION   = '0.10';
 $App::calendr::Option::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 
@@ -23,7 +23,7 @@ use Types::Standard -all;
 use MooX::Options;
 
 has calendars    => (is => 'rw');
-option month     => (is => 'ro', isa => Int, format => 'i', doc => 'Month number e.g. 1,2,3');
+option month     => (is => 'ro', isa => Str, format => 's', doc => 'Month number/name e.g. 1,2,3... or January,February...');
 option year      => (is => 'ro', isa => Int, format => 'i', doc => 'Year number (3/4 digits)');
 option gregorian => (is => 'ro', isa => Str, format => 's', doc => 'Gregorian date (YYYY-MM-DD)');
 option julian    => (is => 'ro', isa => Str, format => 'i', doc => 'Julian date');
