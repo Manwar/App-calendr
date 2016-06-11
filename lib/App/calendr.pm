@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.10';
+$App::calendr::VERSION   = '0.11';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
@@ -58,8 +58,8 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
             Julian date
 
 
-        --month: Int
-            Month number e.g. 1,2,3
+        --month: String
+            Month number/name e.g. 1,2,3... or January,February...
 
 
         --name: String
