@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.11';
+$App::calendr::VERSION   = '0.12';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.11
+Version 0.12
 
 =cut
 
@@ -49,6 +49,8 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
         --as_svg:
             Generate calendar in SVG format
 
+        --list_month_names:
+            List calendar month names
 
         --gregorian: String
             Gregorian date (YYYY-MM-DD)
@@ -179,6 +181,11 @@ sub run {
                 unless ($julian =~ /^\d+\.?\d?$/);
 
             print $calendar->from_julian($self->julian) and return;
+        }
+        elsif (defined $self->list_month_names) {
+            my $month_names = $calendar->date->months;
+            shift @$month_names; # Remove empty entry.
+            print join("\n", @$month_names), "\n" and return;
         }
 
         if (defined $self->as_svg) {

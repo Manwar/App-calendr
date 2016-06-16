@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.12  Thu Jun 16 12:30:00 2016
+      - Added command line parameter "--list_month_names".
+
 0.11  Sat Jun 11 01:30:00 2016
       - Updated "SYNOPSIS" with respect to the changes to the parameter --month.
 
