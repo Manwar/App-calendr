@@ -10,8 +10,8 @@ my $min_ver = 0.23;
 eval "use Calendar::Bahai $min_ver";
 plan skip_all => "Calendar::Bahai $min_ver required" if $@;
 
-eval { App::calendr->new->run };
-like($@, qr/Missing required arguments: name/);
+#eval { App::calendr->new->run };
+#like($@, qr/Missing required arguments: name/);
 
 eval { App::calendr->new({ name => 'xxx' })->run };
 like($@, qr/Unsupported calendar/);

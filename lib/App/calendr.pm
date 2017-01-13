@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.12';
+$App::calendr::VERSION   = '0.13';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.12
+Version 0.13
 
 =cut
 
@@ -24,6 +24,8 @@ use Module::Pluggable
 
 use Moo;
 use namespace::clean;
+
+our $DEFAULT_CALENDAR = 'Gregorian';
 
 use Types::Standard -all;
 use MooX::Options;
@@ -49,8 +51,10 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
         --as_svg:
             Generate calendar in SVG format
 
+
         --list_month_names:
             List calendar month names
+
 
         --gregorian: String
             Gregorian date (YYYY-MM-DD)
@@ -65,7 +69,8 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
 
 
         --name: String
-            Calendar name e.g. Bahai,Gregorian,Hijri,Persian,Saka
+            Calendar name e.g. Bahai,Gregorian,Hijri,Persian,Saka.
+            Default is Gregorian.
 
 
         --year: Int
@@ -138,7 +143,7 @@ sub run {
 
     my $month = $self->month;
     my $year  = $self->year;
-    my $name  = $self->name;
+    my $name  = $self->name || $DEFAULT_CALENDAR;
 
     my $supported_calendars = _supported_calendars();
     die "ERROR: Unsupported calendar [$name] received.\n"

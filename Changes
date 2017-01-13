@@ -1,5 +1,8 @@
 Revision history for App::calendr
 
+0.13  Fri Jan 13 10:35:00 2017
+      - Made command line parameter --name, optional. Default is Gregorian.
+
 0.12  Thu Jun 16 12:30:00 2016
       - Added command line parameter "--list_month_names".
 
