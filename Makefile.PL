@@ -21,7 +21,7 @@ WriteMakefile(
     },
     PREREQ_PM               => {
         'Types::Standard'   => '1.000005',
-        'MooX::Options'     => '4.018',
+        'MooX::Options'     => '4.023',
         'Module::Pluggable' => '5.1',
         'Moo'               => '2.000000',
         'Moo::Role'         => '2.000000',
@@ -32,8 +32,8 @@ WriteMakefile(
     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
         'meta-spec' => { version => 2 },
         provides    => {
-            'App::calendr'         => { file => 'lib/App/calendr.pm'        , version => '0.13' },
-            'App::calendr::Option' => { file => 'lib/App/calendr/Option.pm' , version => '0.13' },
+            'App::calendr'         => { file => 'lib/App/calendr.pm'        , version => '0.14' },
+            'App::calendr::Option' => { file => 'lib/App/calendr/Option.pm' , version => '0.14' },
         },
         resources => {
             repository => {
