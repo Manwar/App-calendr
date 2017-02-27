@@ -1,5 +1,9 @@
 Revision history for App::calendr
 
+0.14  Mon Feb 20 11:25:00 2017
+      - Fixed inconsistent version issues.
+      - Updated dependency on MooX::Options v4.023.
+
 0.13  Fri Jan 13 10:35:00 2017
       - Made command line parameter --name, optional. Default is Gregorian.
 
