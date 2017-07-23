@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.15';
+$App::calendr::VERSION   = '0.16';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.15
+Version 0.16
 
 =cut
 
@@ -69,7 +69,7 @@ act on it.In case none C<flag> passed in it would show the current calendar mont
 
 
         --name: String
-            Calendar name e.g. Bahai,Gregorian,Hijri,Persian,Saka.
+            Calendar name e.g. Bahai,Gregorian,Hebrew,Hijri,Persian,Saka.
             Default is Gregorian.
 
 
@@ -97,6 +97,8 @@ The following supported calendars can be installed individually.
 =item * L<Calendar::Bahai>
 
 =item * L<Calendar::Gregorian>
+
+=item * L<Calendar::Hebrew>
 
 =item * L<Calendar::Hijri>
 
@@ -233,6 +235,7 @@ sub _supported_calendars {
     return {
         'BAHAI'     => 'Calendar::Bahai',
         'GREGORIAN' => 'Calendar::Gregorian',
+        'HEBREW'    => 'Calendar::Hebrew',
         'HIJRI'     => 'Calendar::Hijri',
         'PERSIAN'   => 'Calendar::Persian',
         'SAKA'      => 'Calendar::Saka',
