@@ -1,6 +1,6 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION   = '0.16';
+$App::calendr::Option::VERSION   = '0.17';
 $App::calendr::Option::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.16
+Version 0.17
 
 =cut
 
@@ -27,7 +27,7 @@ option month     => (is => 'ro', isa => Str, format => 's', doc => 'Month number
 option year      => (is => 'ro', isa => Int, format => 'i', doc => 'Year number (3/4 digits)');
 option gregorian => (is => 'ro', isa => Str, format => 's', doc => 'Gregorian date (YYYY-MM-DD)');
 option julian    => (is => 'ro', isa => Str, format => 'i', doc => 'Julian date');
-option name      => (is => 'ro', isa => Str, format => 's', doc => "Calendar name e.g. Bahai,Gregorian,Hebrew,Hijri,Persian,Saka.\n\tDefault is Gregorian.");
+option name      => (is => 'ro', isa => Str, format => 's', doc => "Calendar name e.g. Bahai,Gregorian,Hebrew,Hijri,Julian,Persian,Saka.\n\tDefault is Gregorian.");
 option 'as_svg'  => (is => 'ro', doc => 'Generate calendar in SVG format');
 option 'list_month_names' => (is => 'ro', doc => 'List calendar month names');
 
