@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.18';
+$App::calendr::VERSION   = '0.19';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.18
+Version 0.19
 
 =cut
 

@@ -1,6 +1,6 @@
 package App::calendr::Option;
 
-$App::calendr::Option::VERSION   = '0.18';
+$App::calendr::Option::VERSION   = '0.19';
 $App::calendr::Option::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr::Option - Option as Moo Role for App::calendr.
 
 =head1 VERSION
 
-Version 0.18
+Version 0.19
 
 =cut
 
