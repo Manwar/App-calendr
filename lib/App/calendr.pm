@@ -1,6 +1,6 @@
 package App::calendr;
 
-$App::calendr::VERSION   = '0.22';
+$App::calendr::VERSION   = '0.23';
 $App::calendr::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ App::calendr - Application to display supported Calendar.
 
 =head1 VERSION
 
-Version 0.22
+Version 0.23
 
 =cut
 
@@ -262,7 +262,7 @@ sub _supported_calendars {
         'GREGORIAN' => { name => 'Calendar::Gregorian', min_ver => 0.15 },
         'HEBREW'    => { name => 'Calendar::Hebrew',    min_ver => 0.03 },
         'HIJRI'     => { name => 'Calendar::Hijri',     min_ver => 0.33 },
-        'JULIAN'    => { name => 'Calendar::Julian',    min_ver => 0.02 },
+        'JULIAN'    => { name => 'Calendar::Julian',    min_ver => 0.01 },
         'PERSIAN'   => { name => 'Calendar::Persian',   min_ver => 0.35 },
         'SAKA'      => { name => 'Calendar::Saka',      min_ver => 1.34 },
     };
