@@ -8,6 +8,6 @@ MANIFEST.SKIP
 README
 t/00-load.t
 t/app-calendr.t
-t/manifest.t
-t/pod.t
+xt/manifest.t
+xt/pod.t
 script/calendr
